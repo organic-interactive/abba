@@ -1,0 +1,19 @@
+<template name="abba">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path=""}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Abba</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{#ionList class="card"}}
+        {{#each getPosts}}
+          {{> post}}
+        {{/each}}
+      {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>
